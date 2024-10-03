@@ -22,7 +22,7 @@ import de.mathisneunzig.facilitymanagement.fm.repo.BuildingRepository;
 
 @Controller
 @RestController
-@RequestMapping("/building")
+@RequestMapping("/buildings")
 public class BuildingController {
 	
 	@Autowired

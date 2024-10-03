@@ -15,7 +15,7 @@ public class Building extends UuidIdentifiedEntity {
     @Field("nrOfDesks")
     private int nrOfDesks;
     
-    @Field("nrOfDesks")
+    @Field("address")
     @DBRef
     private Address address;
 
