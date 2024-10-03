@@ -1,4 +1,4 @@
-package de.mathisneunzig.facilitymanagement.facilitymanagement;
+package de.mathisneunzig.facilitymanagement.fm;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
