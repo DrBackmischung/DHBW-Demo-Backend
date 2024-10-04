@@ -31,12 +31,12 @@ public class BuildingController {
 	@Autowired
 	private BuildingFactory factory;
 
-    @GetMapping("")
+    @GetMapping("") // localhost:8081/buildings
     public ResponseEntity<Object> getAll(){
         return new ResponseEntity<Object>(buildingRepository.findAll(), HttpStatus.OK); // Recap: 200 means "OK"
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}") // localhost:8081/buildings/h9n73f-qdh27-1028-aedh73
     public ResponseEntity<Object> getById(@PathVariable UUID id){
         try {
             return new ResponseEntity<Object>(buildingRepository.findById(id).get(), HttpStatus.OK);
@@ -45,7 +45,7 @@ public class BuildingController {
         }
     }
 
-    @GetMapping("/name/{name}")
+    @GetMapping("/name/{name}") // localhost:8081/buildings/name/BER01
     public ResponseEntity<Object> getByName(@PathVariable String name){
         try {
             return new ResponseEntity<Object>(buildingRepository.findByName(name).get(), HttpStatus.OK);

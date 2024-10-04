@@ -20,7 +20,7 @@ import de.mathisneunzig.facilitymanagement.fm.repo.AddressRepository;
 
 @Controller
 @RestController
-@RequestMapping("/addresses")
+@RequestMapping("/addresses") // localhost:8081/addresses
 public class AddressController {
 	
 	@Autowired
@@ -31,7 +31,7 @@ public class AddressController {
         return new ResponseEntity<Object>(addressRepository.findAll(), HttpStatus.OK); // Recap: 200 means "OK"
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Object> getById(@PathVariable UUID id){
         try {
             return new ResponseEntity<Object>(addressRepository.findById(id).get(), HttpStatus.OK);
